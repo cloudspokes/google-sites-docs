@@ -1,0 +1,35 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="/stylesheets/application.css"/>
+	</head>
+	<body>
+		<div id="container">
+			<div id="greeting">
+				Hello, {{ args.userAccount }}
+			</div>
+		{% if not sites %}
+		 	<div id="no_options">
+				Sorry there are no sites accessible on {{ args.siteDomain }} for you. Enter one manually.
+			</div>
+		{% else %}	
+			<div id="prelude">
+				These are the sites on the domain "{{ args.siteDomain }}" that you have access to; please select one:
+			</div>
+		{% endif %}
+			<div id="form">
+				<form action="/inventory" method="post">
+				{% for site in sites %}
+					<input type="radio" name="siteName" value="{{ site }}"/> {{ site }} <br/>
+				{% endfor %}
+				{% for arg in args.items %}
+					<input type="hidden" name="{{ arg.0 }}" value="{{ arg.1 }}"/>
+				{% endfor %}
+					<label>Other:</label><br/>
+				    <input type="radio" name="siteURL" id="otherOption" value=""/>
+				    <input type="text" name="other" placeholder="enter a site name"/><br/>
+					<input type="submit" value="Submit"/>
+				</form>
+			</div>
+		</div>
+	</body>
+</html>

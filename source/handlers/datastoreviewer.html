@@ -1,0 +1,23 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="/stylesheets/application.css"/>
+        <style type="text/css">
+            td.json { width: 800px; word-break:break-all;}
+            td { padding: 0 0.5em; }
+        </style>
+	</head>
+	<body>
+        <div id="container">
+            <table rules="rows">
+                <th> json </th><th> site name </th><th> user account </th>
+                {% for entity in entities %}
+                    <tr>
+                        <td class="json">{{ entity.json }}</td>
+                        <td>{{ entity.siteName }}</td>
+                        <td>{{ entity.userAccount }}</td>
+                    </tr>
+                {% endfor %}
+			</table>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,12 @@
+Google Sites Embedded gDocs Inventory
+
+URL: http://www.cloudspokes.com/challenge_detail.html?contestID=202
+Challenge end date: Mon May 30 05:00:00 GMT 2011
+
+Description
+===========
+<p>Develop a Google App Engine app that iterates through all of the pages in a Google Site and stores the Google Doc IDs of all embedded Google Docs as JSON in the datastore.</p> <p>First Place: $1500<br> Second Place: $500</p>
+
+Requirements
+============
+<p>Write an App Engine app the finds all Google Docs in a Google Site and stores the information in the datastore. The application will have a simple UI that allows the user to enter a Google User Account (me@mydomain.com) and an OAuth token. When the user submits the form, the resulting page displays a picklist of Sites the user has access to. Once the user select the desired Site and submits the form, the app will will find all of the Google Docs embedded in the pages of the Site and store the resulting JSON in the datastore along with the Google User Account and Site name.</p> <p>The sample JSON for a single document may look like the following. Feel free to make enhancements to meet the requirements.</p> <p>{<br> &quot;siteURL&quot;, &quot;https://sites.google.com/a/thedomain.com/site1&quot;,<br> &quot;docID&quot;, &quot;https://docs.google.com/Doc?authuser=0&amp;docid=asfafkaldf878ylkhklshf4cGNkbQ&amp;hgd=1&quot;<br> } </p><p> </p><p>The app will work universally with Admin and non-Admin accounts. For non-Admin accounts, it should simply parse the Site pages that the user has access to - follow the new page level permission rules to determine access.</p> <p>The application can be written in either Python or Java, however Python is preferred.</p>

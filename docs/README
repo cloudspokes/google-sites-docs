@@ -1,0 +1,40 @@
+README
+------------------------------
+
+Instructions for deploying:
+Simply deploy the app using the google app engine (appcfg.py)
+
+ The datastoreviewer.py (and .html) in the handlers folder is not necessary for
+ this web app to function but is provided to let you see the contents of
+ the datastore without giving you admin access.
+
+------------------------------
+
+Instructions on using:
+
+at /:
+
+1. Enter the user account
+2. Enter an OAuth2 token, make sure the scope includes https://sites.google.com
+3. Enter the domain of the site, examples:
+  for 'https://sites.google.com/site/techtipstuesday' enter 'site'
+  for 'https://sites.google.com/a/cloudspokes.com/home' enter 'cloudspokes.com'
+
+assuming you inputted a valid oauth token you will be redirected to /site_select
+
+at /site_select:
+ The choices are site names, examples:
+  for 'https://sites.google.com/site/techtipstuesday' it is 'techtipstuesday'
+  for 'https://sites.google.com/a/cloudspokes.com/home' it is 'home'
+ You could also specify the site name yourself i.e. if you do not have
+ special access to that google site
+ 
+at /inventory:
+ Just a message that your request is being processed (using task queues).
+ Go to the link for viewing the datastore.
+ 
+at /datastore_viewer:
+ Displays the contents of the datastore. If you have requested a site to process,
+ wait a few minutes (hours depending on the largeness of the site)
+ for the google docs found on that site to appear on the datastore.
+ 

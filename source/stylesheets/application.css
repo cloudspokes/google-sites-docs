@@ -1,0 +1,48 @@
+body {
+  background-color: #4B7399;
+  font-family: Verdana, Helvetica, Arial;
+  font-size: 14px;
+  text-align: center;
+}
+
+table {
+  font-size: 14px;
+}
+
+#container {
+  display: inline-block;	
+  background-color: #EEE;
+  padding: 20px 40px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -khtml-border-radius: 5px;
+  border-radius: 5px;
+  margin-top: 20px;
+  text-shadow: 0px 1px #FFF;
+  color: #333;
+  text-align: left;
+}
+
+#container input[type=text] {	
+  border: 1px solid;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -khtml-border-radius: 5px;
+  box-shadow: inset 0px 2px 5px #AAA, 0px 1px #FFF;
+  -moz-box-shadow: inset 0px 2px 5px #AAA, 0px 1px #FFF;
+  -webkit-box-shadow: inset 0px 2px 5px #AAA, 0px 1px #FFF;
+  border-color: #AAA;
+  border-radius: 14px;
+  font-size: 14px;
+  padding: 4px 10px;
+  margin-top: 5px;
+  width: 300;
+}
+
+#container input[type=submit] {
+	margin-top: 5px;
+}
+
+#container input[type=radio] {
+	margin-top: 5px;
+}

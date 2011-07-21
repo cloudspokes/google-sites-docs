@@ -1,0 +1,25 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="/stylesheets/application.css"/>
+	</head>
+	<body>
+		<div id='container'>
+			<form action="/site_select" method="post">
+				<table>
+					<tr>
+	      				<td><label>User Account:</label>
+	      				<td><input type="text" name="userAccount" placeholder="user@domain.com">
+					</tr>
+					<tr>
+						<td><label>OAuth token:</label>
+						<td><input type="text" name="oauthToken">
+					</tr>
+					<tr>
+						<td><label>Domain:</label>
+						<td><input type="text" name="siteDomain" placeholder="(e.g. www.example.com or site)">
+				</table>
+				<input type="submit" value="Submit">
+			</form>
+		</div>
+	</body>
+</html>
